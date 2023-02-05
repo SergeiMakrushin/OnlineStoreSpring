@@ -10,6 +10,19 @@ import java.util.List;
 @Service
 public class BasketService {
 
+    private final Baskets baskets;
 
+    public BasketService(Baskets baskets) {
+        this.baskets = baskets;
+    }
+
+
+    public Collection<Integer> getAllBasket() {
+        return this.baskets.getAllBasket();
+    }
+
+    public void addBasket(List<Integer> ids) {
+        this.baskets.addBasket(ids);
+    }
 
 }
